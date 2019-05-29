@@ -14,7 +14,8 @@ See the `app.forms.perf.spec.js` test for the code to gather performance data.
 3.2 Need your API id
 3.3 Need you app id
 
-Looks like you can't gather the performance data as it runs the appium server on the SauceLabs side, so it can't save the data. I'm guessing SauceLabs provides performance data anyway?
+To track performance, need `recordDeviceVitals` in the capabilities for saucelabs:
+https://wiki.saucelabs.com/display/DOCS/Monitoring+Real+Device+Performance+for+Automated+Tests
 
 It would be nice to get my dotenv working so I can store my API id in a .env file
 

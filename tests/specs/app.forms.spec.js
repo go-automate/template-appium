@@ -2,7 +2,6 @@ import Gestures from '../helpers/Gestures';
 import TabBar from '../screenobjects/components/tab.bar';
 import FormScreen from '../screenobjects/forms.screen';
 import LoginScreen from '../screenobjects/login.screen';
-import fs from 'fs';
 
 describe('WebdriverIO and Appium, interacting with form elements,', () => {
     beforeEach(() => {
@@ -12,7 +11,6 @@ describe('WebdriverIO and Appium, interacting with form elements,', () => {
     });
 
     it('should be able type in the input and validate the text', () => {
-
         const text = 'Hello, this is a demo app';
         FormScreen.input.setValue(text);
         expect(FormScreen.inputTextResult.getText()).toEqual(text);
