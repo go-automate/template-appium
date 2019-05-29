@@ -38,6 +38,11 @@ exports.config = {
     // ====================
     // Some hooks
     // ====================
+
+    onPrepare: function (config, capabilities) {
+        require('dotenv').config();
+    },
+
     beforeSession: (config, capabilities, specs) => {
         require('@babel/register');
     },

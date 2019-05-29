@@ -111,3 +111,9 @@ http://appium.io/docs/en/drivers/ios-xcuitest-real-devices/
  - The Appium desktop and inspector
 
 https://github.com/appium/appium-desktop
+
+ - Read up about instruments:
+
+ https://help.apple.com/instruments/mac/current/#/dev7b09c84f5
+
+ How would you get the identifiers if you have the source code?
