@@ -14,18 +14,20 @@ config.specs = [
 // http://appium.io/docs/en/writing-running-appium/caps/#general-capabilities
 config.capabilities = [
     {
-        deviceName: 'iPhone X*',
+        deviceName: 'iPhone 6',
         // The reference to the app
         testobject_app_id: '1',
         // The api key that has a reference to the app-project in the TO cloud
-        testobject_api_key: process.env.SAUCE_RDC_EU_ACCESS_KEY_IOS_WDIO,
+        // testobject_api_key: 'process.env.SAUCE_RDC_EU_ACCESS_KEY_IOS_WDIO',
+        testobject_api_key: '070D0D698B42416C8C35420857396449',
         // The name of the test for in the cloud
         testobject_test_name: 'wdio-demo-app-test',
         // Some default settings
         // You can find more info in the TO Appium Basic Setup section
         platformName: 'iOS',
+        platformVersion: '12.3',
         idleTimeout: 180,
-        maxInstances: 6,
+        maxInstances: 1,
         // testobject_cache_device: true,
         noReset: true,
         orientation: 'PORTRAIT',

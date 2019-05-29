@@ -6,9 +6,22 @@ See the `app.forms.perf.spec.js` test for the code to gather performance data.
 
 ## Saucelabs and other cloud vendors:
 
+1. Got an account
+2. Clicked on Real Device Testing
+2.1 Uploaded the app (real device one in the iOS case)
+3. Followed instructions for the Capabilities:
+3.1 Need to see which devices are available and choose the device, OS and OS version accordingly (in Europe)
+3.2 Need your API id
+3.3 Need you app id
 
+Looks like you can't gather the performance data as it runs the appium server on the SauceLabs side, so it can't save the data. I'm guessing SauceLabs provides performance data anyway?
+
+It would be nice to get my dotenv working so I can store my API id in a .env file
 
 ## Running a real device
+
+Seems like this is the place to get performance data using the code.
+
 
 
 

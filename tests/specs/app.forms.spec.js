@@ -12,25 +12,6 @@ describe('WebdriverIO and Appium, interacting with form elements,', () => {
     });
 
     it('should be able type in the input and validate the text', () => {
-        let startArgs = {
-            pid: 'current',
-            profileName: 'Time Profiler',
-            timeout: 60000
-        };
-
-        let jsonStartArgs = JSON.stringify(startArgs);
-
-        console.log(jsonStartArgs);
-
-        let stopArgs = {
-            profileName: 'Time Profiler',
-        };
-
-        let jsonStopArgs = JSON.stringify(stopArgs);
-
-        let perfResults;
-
-        browser.execute('mobile: startPerfRecord', jsonStartArgs);
 
         const text = 'Hello, this is a demo app';
         FormScreen.input.setValue(text);
@@ -45,21 +26,6 @@ describe('WebdriverIO and Appium, interacting with form elements,', () => {
         if (driver.isKeyboardShown()) {
             driver.hideKeyboard();
         }
-
-        perfResults = browser.execute('mobile: stopPerfRecord', jsonStopArgs);
-
-        // Try decoding this.
-
-        let buff = Buffer.from(perfResults, 'base64');
-        let perfDataDecoded = buff.toString('ascii');
-
-        // Create a file
-        const filePath = '/Users/standoubt/Documents/perf.zip';
-
-        fs.writeFile(filePath, perfDataDecoded, (err) => {
-            if (err) console.log(err);
-            console.log('Successfully Written to File');
-        });
     });
 
     it('should be able turn on and off the switch', () => {
